@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年末交換禮物派對｜邀請函</title>
+  <style>
+    :root {
+      --bg: #fff7ed;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --accent: #dc2626;
+      --accent-2: #16a34a;
+      --line: #fde2c8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 10%, #fee2e2 0, transparent 40%),
+                  radial-gradient(circle at 85% 30%, #dcfce7 0, transparent 35%),
+                  var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 64px 16px 32px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      margin: 16px 0 8px;
+    }
+    .subtitle { color: var(--muted); font-size: 18px; }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(220, 38, 38, 0.06);
+    }
+    .card .icon { font-size: 32px; }
+    .card h2 { font-size: 20px; margin: 8px 0; }
+    .card p { color: var(--muted); }
+    .rules {
+      grid-column: 1 / -1;
+    }
+    .rules ol { padding-left: 24px; color: var(--muted); }
+    .rules li { margin: 6px 0; }
+    .cta {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 32px 24px;
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: #fff;
+      border: none;
+    }
+    .cta h2 { color: #fff; }
+    .cta p { color: #ffedd5; }
+    .countdown {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 12px 0 0;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      padding-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="badge">INVITATION</span>
+    <h1>🎁 年末交換禮物派對</h1>
+    <p class="subtitle">一年辛苦了，帶一份小禮物，換一份驚喜回家</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="icon">📅</div>
+      <h2>時間</h2>
+      <p>2026/12/19（六）<br>下午 2:00 – 5:00</p>
+    </section>
+    <section class="card">
+      <div class="icon">📍</div>
+      <h2>地點</h2>
+      <p>公司 5 樓交誼廳<br>現場備有熱可可與點心</p>
+    </section>
+    <section class="card">
+      <div class="icon">💰</div>
+      <h2>禮物預算</h2>
+      <p>新台幣 500 元左右<br>實用、好笑、療癒都可以</p>
+    </section>
+
+    <section class="card rules">
+      <h2>📝 遊戲規則</h2>
+      <ol>
+        <li>禮物請先包裝好，外面不要寫名字。</li>
+        <li>入場時抽號碼牌，依序上台挑選禮物。</li>
+        <li>後面的人可以「搶」前面已拆開的禮物，每份禮物最多被搶兩次。</li>
+        <li>最後一位可以從所有禮物中任選一份，運氣王就是你！</li>
+      </ol>
+    </section>
+
+    <section class="card cta">
+      <h2>距離派對開始還有</h2>
+      <p class="countdown" id="countdown">計算中…</p>
+      <p>記得在 12/12 前跟主辦人說你會來喔！</p>
+    </section>
+  </main>
+
+  <footer>這是一個由 AI 生成的一頁式 HTML 範例網頁</footer>
+
+  <script>
+    const target = new Date("2026-12-19T14:00:00+08:00");
+    const el = document.getElementById("countdown");
+    function tick() {
+      const diff = target - new Date();
+      if (diff <= 0) {
+        el.textContent = "派對進行中 🎉";
+        return;
+      }
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const minutes = Math.floor((diff % 3600000) / 60000);
+      el.textContent = `${days} 天 ${hours} 小時 ${minutes} 分`;
+    }
+    tick();
+    setInterval(tick, 30000);
+  </script>
+</body>
+</html>
