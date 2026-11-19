@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>報名說明｜年末交換禮物派對</title>
+  <style>
+    :root {
+      --bg: #fff7ed;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --accent: #dc2626;
+      --line: #fde2c8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 10%, #fee2e2 0, transparent 40%),
+                  radial-gradient(circle at 85% 30%, #dcfce7 0, transparent 35%),
+                  var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 48px 16px 24px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .back:hover { text-decoration: underline; }
+    h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      margin: 8px 0;
+    }
+    .subtitle { color: var(--muted); font-size: 18px; }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+      display: grid;
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(220, 38, 38, 0.06);
+    }
+    .card h2 { font-size: 20px; margin-bottom: 8px; }
+    .card ol, .card ul { padding-left: 24px; color: var(--muted); }
+    .card li { margin: 6px 0; }
+    .card p { color: var(--muted); }
+    .map {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      padding-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="./">← 回到活動首頁</a>
+    <h1>📮 報名說明</h1>
+    <p class="subtitle">年末交換禮物派對｜2026/12/19（六）下午 2:00 – 5:00</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>怎麼報名</h2>
+      <ol>
+        <li>12/12 前，在公司群組回覆主辦人「+1」。</li>
+        <li>主辦人會依回覆順序確認人數，當天現場不另外受理報名。</li>
+        <li>臨時不能來，也請在群組說一聲，方便調整禮物數量。</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>禮物準備</h2>
+      <ul>
+        <li>預算新台幣 500 元左右，實用、好笑、療癒都可以。</li>
+        <li>請先包裝好，外面不要寫名字。</li>
+        <li>抵達後先把禮物放到交誼廳中間的禮物桌。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>場地：公司 5 樓交誼廳</h2>
+      <p>出電梯後沿走廊往右，入口在交誼廳下方。入場時記得先抽號碼牌。</p>
+      <img class="map" src="images/venue-map.webp" alt="5 樓交誼廳配置示意圖：電梯在左下方，入口在下方中間，進門後依序是抽號碼牌、座位區、中間的禮物桌與右側的點心區">
+    </section>
+  </main>
+
+  <footer>這是一個由 AI 生成的一頁式 HTML 範例網頁</footer>
+</body>
+</html>
